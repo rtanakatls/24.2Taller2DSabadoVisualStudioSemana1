@@ -18,6 +18,9 @@ namespace _24._2Taller2DSabadoSemana1
                 Console.WriteLine("2. Leer 2 números y operar división y módulo");
                 Console.WriteLine("3. Leer una cantidad de días, convertirlo a años y semanas");
                 Console.WriteLine("4. Leer un año y mostrar si es bisiesto o no");
+                Console.WriteLine("5. Leer un número y mostrar si es negativo, positivo o cero");
+                Console.WriteLine("6. Leer un número y mostrar si es divisible entre 7 y/o 13");
+                Console.WriteLine("7. Leer un número y mostrar si es par o impar");
                 Console.WriteLine("0. Salir");
 
                 string option = Console.ReadLine();
@@ -32,6 +35,18 @@ namespace _24._2Taller2DSabadoSemana1
                         break;
                     case "3":
                         E3();
+                        break;
+                    case "4":
+                        E4();
+                        break;
+                    case "5":
+                        E5();
+                        break;
+                    case "6":
+                        E6();
+                        break;
+                    case "7":
+                        E7();
                         break;
                     case "0":
                         continueFlag = false;
@@ -104,6 +119,64 @@ namespace _24._2Taller2DSabadoSemana1
             }
         }
 
+        private void E5()
+        {
+            int a;
+            Console.WriteLine("Introduce un número");
+            a = int.Parse(Console.ReadLine());
+            if (a < 0)
+            {
+                Console.WriteLine("Es negativo");
+            }
+            else if (a > 0)
+            {
+                Console.WriteLine("Es positivo");
+            }
+            else
+            {
+                Console.WriteLine("Es cero");
+            }
+
+        }
+
+        private void E6()
+        {
+            int a;
+            Console.WriteLine("Introduce un número");
+            a = int.Parse(Console.ReadLine());
+            if (a % 7 == 0 && a % 13 == 0)
+            {
+                Console.WriteLine("Es divisible entre 7 y 13");
+            }
+            else if (a % 7 == 0)
+            {
+                Console.WriteLine("Es divisible entre 7");
+            }
+            else if (a % 13 == 0)
+            {
+                Console.WriteLine("Es divisible entre 13");
+            }
+            else
+            {
+                Console.WriteLine("No es divisible entre 7 ni 13");
+            }
+        }
+
+        private void E7()
+        {
+            int a;
+            Console.WriteLine("Introduce un número");   
+            a= int.Parse(Console.ReadLine());
+            if (a % 2 == 0)
+            {
+                Console.WriteLine("Es par");
+            }
+            else
+            {
+                Console.WriteLine("Es impar");
+            }
+
+        }
 
         private void EnterName()
         {
