@@ -21,6 +21,9 @@ namespace _24._2Taller2DSabadoSemana1
                 Console.WriteLine("5. Leer un número y mostrar si es negativo, positivo o cero");
                 Console.WriteLine("6. Leer un número y mostrar si es divisible entre 7 y/o 13");
                 Console.WriteLine("7. Leer un número y mostrar si es par o impar");
+                Console.WriteLine("8. Leer 3 notas, determinar su promedio TLS y escribir si aprobó o no");
+                Console.WriteLine("9. Leer 4 notas, 3 de promedio de clase y 1 de jurado, determinar su promedio TLS y escribir si aprobó o no");
+                Console.WriteLine("10. Desarrollar una calculadora simple: leer 2 números, luego leer el símbolo de la operación a realizar (suma, resta, multiplicación, división y módulo) y ejecutar la operación.");
                 Console.WriteLine("0. Salir");
 
                 string option = Console.ReadLine();
@@ -47,6 +50,15 @@ namespace _24._2Taller2DSabadoSemana1
                         break;
                     case "7":
                         E7();
+                        break;
+                    case "8":
+                        E8();
+                        break;
+                    case "9":
+                        E9();
+                        break;
+                    case "10":
+                        E10();
                         break;
                     case "0":
                         continueFlag = false;
@@ -176,6 +188,103 @@ namespace _24._2Taller2DSabadoSemana1
                 Console.WriteLine("Es impar");
             }
 
+        }
+
+        private void E8()
+        {
+            float grade1;
+            float grade2;
+            float grade3;
+            float average;
+            Console.WriteLine("Introduce la primera nota");
+            grade1 = float.Parse(Console.ReadLine());
+            Console.WriteLine("Introduce la segunda nota");
+            grade2 = float.Parse(Console.ReadLine());
+            Console.WriteLine("Introduce la tercera nota");
+            grade3 = float.Parse(Console.ReadLine());
+            average = (grade1 + grade2 + 2 * grade3) / 4;
+            Console.WriteLine($"El promedio es: {average}");
+            if(average>=12.5f)
+            {
+                Console.WriteLine("Aprobó");
+            }
+            else
+            {
+                Console.WriteLine("Desaprobó");
+            }
+            
+        }
+
+        private void E9()
+        {
+            float grade1;
+            float grade2;
+            float grade3;
+            float grade4;
+            float average;
+            float finalAverage;
+            Console.WriteLine("Introduce la primera nota");
+            grade1 = float.Parse(Console.ReadLine());
+            Console.WriteLine("Introduce la segunda nota");
+            grade2 = float.Parse(Console.ReadLine());
+            Console.WriteLine("Introduce la tercera nota");
+            grade3 = float.Parse(Console.ReadLine());
+            Console.WriteLine("Introduce la nota de jurado");
+            grade4 = float.Parse(Console.ReadLine());
+
+            average = (grade1 + grade2 + 2 * grade3) / 4;
+            finalAverage = (2 * average + grade4) / 3;
+            Console.WriteLine($"El promedio final es: {finalAverage}");
+            if (average >= 12.5f)
+            {
+                Console.WriteLine("Aprobó");
+            }
+            else
+            {
+                Console.WriteLine("Desaprobó");
+            }
+        }
+
+        private void E10()
+        {
+            bool continueFlag = true;
+            while (continueFlag)
+            {
+                float a;
+                float b;
+                Console.WriteLine("Introduce el primer número");
+                a = float.Parse(Console.ReadLine());
+                Console.WriteLine("Introduce el segundo número");
+                b = float.Parse(Console.ReadLine());
+                Console.WriteLine("Introduce el símbolo de la operación");
+                string operation = Console.ReadLine();
+                switch (operation)
+                {
+                    case "+":
+                        Console.WriteLine($"{a} + {b} = {a + b}");
+                        break;
+                    case "-":
+                        Console.WriteLine($"{a} - {b} = {a - b}");
+                        break;
+                    case "*":
+                        Console.WriteLine($"{a} * {b} = {a * b}");
+                        break;
+                    case "/":
+                        Console.WriteLine($"{a} / {b} = {a / b}");
+                        break;
+                    case "%":
+                        Console.WriteLine($"{a} % {b} = {a % b}");
+                        break;
+                }    
+
+                Console.WriteLine("Introducir otro cálculo? (s/n)");
+                string answer = Console.ReadLine();
+                if (answer == "n")
+                {
+                    continueFlag = false;
+                }
+
+            }
         }
 
         private void EnterName()
