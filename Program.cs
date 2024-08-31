@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using _24._2Taller2DSabadoSemana1.Week2;
 
 namespace _24._2Taller2DSabadoSemana1
 {
@@ -10,7 +11,7 @@ namespace _24._2Taller2DSabadoSemana1
     {
         static void Main(string[] args)
         {
-            Menu menu = new Menu();
+            Week2Menu menu = new Week2Menu();
             menu.Execute();
         }
     }
