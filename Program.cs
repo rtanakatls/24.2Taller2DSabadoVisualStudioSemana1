@@ -11,7 +11,7 @@ namespace _24._2Taller2DSabadoSemana1
     {
         static void Main(string[] args)
         {
-            Week2Menu menu = new Week2Menu();
+            Menu menu = new Menu();
             menu.Execute();
         }
     }

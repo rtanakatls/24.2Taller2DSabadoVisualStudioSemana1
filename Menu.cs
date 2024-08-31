@@ -10,6 +10,11 @@ namespace _24._2Taller2DSabadoSemana1
     {
         public void Execute()
         {
+            E30();
+        }
+
+        private void Execute1_10()
+        {
             bool continueFlag = true;
             while (continueFlag)
             {
@@ -111,7 +116,7 @@ namespace _24._2Taller2DSabadoSemana1
             {
                 if (year % 100 == 0)
                 {
-                    if(year % 400 == 0)
+                    if (year % 400 == 0)
                     {
                         Console.WriteLine("Es bisiesto");
                     }
@@ -177,8 +182,8 @@ namespace _24._2Taller2DSabadoSemana1
         private void E7()
         {
             int a;
-            Console.WriteLine("Introduce un número");   
-            a= int.Parse(Console.ReadLine());
+            Console.WriteLine("Introduce un número");
+            a = int.Parse(Console.ReadLine());
             if (a % 2 == 0)
             {
                 Console.WriteLine("Es par");
@@ -204,7 +209,7 @@ namespace _24._2Taller2DSabadoSemana1
             grade3 = float.Parse(Console.ReadLine());
             average = (grade1 + grade2 + 2 * grade3) / 4;
             Console.WriteLine($"El promedio es: {average}");
-            if(average>=12.5f)
+            if (average >= 12.5f)
             {
                 Console.WriteLine("Aprobó");
             }
@@ -212,7 +217,7 @@ namespace _24._2Taller2DSabadoSemana1
             {
                 Console.WriteLine("Desaprobó");
             }
-            
+
         }
 
         private void E9()
@@ -275,7 +280,7 @@ namespace _24._2Taller2DSabadoSemana1
                     case "%":
                         Console.WriteLine($"{a} % {b} = {a % b}");
                         break;
-                }    
+                }
 
                 Console.WriteLine("Introducir otro cálculo? (s/n)");
                 string answer = Console.ReadLine();
@@ -320,6 +325,433 @@ namespace _24._2Taller2DSabadoSemana1
                     Console.WriteLine("Eres mayor de edad");
                 }
             }
+        }
+
+        private void E11()
+        {
+            int n;
+
+            Console.WriteLine("Introduce un número");
+            n = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= n; i++)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
+        private void E12()
+        {
+            int n;
+
+            Console.WriteLine("Introduce un número");
+            n = int.Parse(Console.ReadLine());
+            for (int i = n; i >= 1; i--)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
+        private void E13()
+        {
+            int n;
+
+            Console.WriteLine("Introduce un número");
+            n = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= n; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+        }
+        private void E13A()
+        {
+            int n;
+
+            Console.WriteLine("Introduce un número");
+            n = int.Parse(Console.ReadLine());
+            for (int i = 2; i <= n; i += 2)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
+        private void E14()
+        {
+            int n;
+            int result = 0;
+
+            Console.WriteLine("Introduce un número");
+            n = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= n; i++)
+            {
+                result += i;
+            }
+            Console.WriteLine(result);
+        }
+
+        private void E15()
+        {
+            int n;
+            int result = 0;
+
+            Console.WriteLine("Introduce un número");
+            n = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= n; i++)
+            {
+                if (i % 2 == 1)
+                {
+                    result += i;
+                }
+            }
+            Console.WriteLine(result);
+        }
+
+        private void E15A()
+        {
+            int n;
+            int result = 0;
+
+            Console.WriteLine("Introduce un número");
+            n = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= n; i += 2)
+            {
+                result += i;
+            }
+            Console.WriteLine(result);
+        }
+
+        private void E16()
+        {
+            int n;
+            int result = 1;
+
+            Console.WriteLine("Introduce un número");
+            n = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= n; i++)
+            {
+                result *= i;
+            }
+            Console.WriteLine(result);
+        }
+
+        private void E17()
+        {
+            int n;
+            int count = 0;
+
+            Console.WriteLine("Introduce un número");
+            n = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= n; i++)
+            {
+                if (n % i == 0)
+                {
+                    count++;
+                }
+            }
+
+            if (count == 2)
+            {
+                Console.WriteLine("Es primo");
+            }
+            else
+            {
+                Console.WriteLine("No es primo");
+            }
+        }
+
+        private void E18()
+        {
+            int n;
+            int count = 0;
+            int result = 0;
+
+            Console.WriteLine("Introduce un número");
+            n = int.Parse(Console.ReadLine());
+            for (int j = 1; j <= n; j++)
+            {
+                count = 0;
+                for (int i = 1; i <= j; i++)
+                {
+                    if (j % i == 0)
+                    {
+                        count++;
+                    }
+                }
+
+                if (count == 2)
+                {
+                    result += j;
+                }
+            }
+            Console.WriteLine(result);
+
+        }
+
+        private void E19()
+        {
+            int a;
+            int b;
+            int c;
+            int n;
+
+            Console.WriteLine("Introduce un número");
+            n = int.Parse(Console.ReadLine());
+            a = 0;
+            b = 1;
+            for (int i = 1; i <= n; i++)
+            {
+                Console.WriteLine(a);
+                c = a + b;
+                a = b;
+                b = c;
+            }
+        }
+
+        private void E20()
+        {
+            int n;
+            int count = 0;
+
+            Console.WriteLine("Introduce un número");
+            n = int.Parse(Console.ReadLine());
+
+            int temp = n;
+            while (temp > 0)
+            {
+                temp = (temp - temp % 10) / 10;
+                count++;
+            }
+            Console.WriteLine(count);
+
+        }
+
+        private void E21()
+        {
+            int[] values = { 10, -10, 20, -20, 12, 59, -98, -12, 15 };
+
+            for (int i = 0; i < values.Length; i++)
+            {
+                if (values[i] < 0)
+                {
+                    Console.WriteLine(values[i]);
+                }
+            }
+        }
+
+        private void E22()
+        {
+            int[] values = { 10, -10, 20, -20, 12, 59, -98, -12, 15 };
+            int result = 0;
+
+            for (int i = 0; i < values.Length; i++)
+            {
+                if (values[i] > 0)
+                {
+                    result += values[i];
+                }
+            }
+
+            Console.WriteLine(result);
+        }
+
+        private void E23()
+        {
+            int[] values = { 10, -10, 20, -20, 12, 59, -98, -12, 15 };
+            int count = 0;
+
+            for (int i = 0; i < values.Length; i++)
+            {
+                if (values[i] % 2 == 0)
+                {
+                    count++;
+                }
+            }
+
+            Console.WriteLine(count);
+        }
+
+        private void E24()
+        {
+            int[] values = { 10, -10, 20, -20, 12, 59, -98, -12, 15 };
+            int count = 0;
+
+            for (int i = 0; i < values.Length; i++)
+            {
+                if (values[i] < 0)
+                {
+                    count++;
+                }
+            }
+
+            Console.WriteLine(count);
+        }
+
+        private void E25()
+        {
+            int[] values = { 10, -10, 20, -20, 12, 59, -98, -12, 15 };
+            int result = 0;
+
+            for (int i = 0; i < values.Length; i++)
+            {
+                if (values[i] % 2 != 0)
+                {
+                    result += values[i];
+                }
+            }
+
+            Console.WriteLine(result);
+        }
+
+        private void E26()
+        {
+            int[] values = { 10, -10, 20, -20, 12, 59, -98, -12, 15 };
+            int result = 0;
+            int max;
+            int min;
+
+            max = -99999999;
+            min = 99999999;
+            for (int i = 0; i < values.Length; i++)
+            {
+                if (values[i] > max)
+                {
+                    max = values[i];
+                }
+                if (values[i] < min)
+                {
+                    min = values[i];
+                }
+            }
+            result = max + min;
+            Console.WriteLine(result);
+        }
+
+        private void E27()
+        {
+            int[] values = { 10, -10, 20, -20, 12, 59, -98, -12, 15 };
+            int index;
+
+            Console.WriteLine("Introduce el índice");
+            index = int.Parse(Console.ReadLine());
+
+            int[] temp = new int[values.Length - 1];
+
+            for (int i = 0; i < values.Length; i++)
+            {
+                if (i < index)
+                {
+                    temp[i] = values[i];
+                }
+                else if (i > index)
+                {
+                    temp[i - 1] = values[i];
+                }
+            }
+            Console.WriteLine("Arreglo original");
+            for (int i = 0; i < values.Length; i++)
+            {
+                Console.Write(values[i] + " ");
+            }
+            values = temp;
+            Console.WriteLine("Nuevo arreglo");
+            for (int i = 0; i < values.Length; i++)
+            {
+                Console.Write(values[i] + " ");
+            }
+
+        }
+
+
+        private void E28()
+        {
+            int[] values = { 10, -10, 20, -20, 20, -20, 20, 20, -10 };
+            int n;
+            int count = 0;
+
+            Console.WriteLine("Introduce un número");
+            n = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < values.Length; i++)
+            {
+                if (values[i] == n)
+                {
+                    count++;
+                }
+            }
+
+            Console.WriteLine(count);
+        }
+        private void E29()
+        {
+            int[] values = { 10, -10, 20, -20, 20, -20, 20, 20, -10 };
+            int[] temp = new int[values.Length];
+
+
+            for (int i = 0; i < values.Length; i++)
+            {
+                temp[values.Length - 1 - i] = values[i];
+            }
+
+            Console.WriteLine("Arreglo original");
+            for (int i = 0; i < values.Length; i++)
+            {
+                Console.Write(values[i] + " ");
+            }
+            values = temp;
+            Console.WriteLine("Nuevo arreglo");
+            for (int i = 0; i < values.Length; i++)
+            {
+                Console.Write(values[i] + " ");
+            }
+        }
+        private void E30()
+        {
+            int[] values = { 10, -10, 20, -20, 12, 59, -98, -12, 15 };
+            int[] evenValues;
+            int[] oddValues;
+            int evenCount = 0;
+            for (int i = 0; i < values.Length; i++)
+            {
+                if (values[i] % 2 == 0)
+                {
+                    evenCount++;
+                }
+            }
+
+            evenValues = new int[evenCount];
+            oddValues = new int[values.Length - evenCount];
+            int index = 0;
+            for (int i = 0; i < values.Length; i++)
+            {
+                if (values[i] % 2 == 0)
+                {
+                    evenValues[index] = values[i];
+                    index++;
+                }
+            }
+            index = 0;
+            for (int i = 0; i < values.Length; i++)
+            {
+                if (values[i] % 2 != 0)
+                {
+                    oddValues[index] = values[i];
+                    index++;
+                }
+            }
+
+            Console.WriteLine("Arreglo pares");
+            for (int i = 0; i < evenValues.Length; i++)
+            {
+                Console.Write(evenValues[i] + " ");
+            }
+            Console.WriteLine("\nArreglo impares");
+            for (int i = 0; i < oddValues.Length; i++)
+            {
+                Console.Write(oddValues[i] + " ");
+            }
+            Console.WriteLine();
         }
     }
 }
